@@ -5,3 +5,10 @@ spring:
 server:
   port: 8081
 
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false #不向注册中心注册自己
+    fetch-registry: false #不去检索服务
+    service-url: http://${eureka.instance.hostname}:${server.port}/eureka/
